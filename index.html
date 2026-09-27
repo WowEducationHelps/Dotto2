@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Do. — One production workspace</title>
+  <meta name="description" content="Plan productions, coordinate partners and equipment, compare quotes, and keep the financial record clear.">
+  <meta name="theme-color" content="#f2ede1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Do.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <!-- 1. Splash -->
+  <section class="screen screen--splash is-active" id="splash" aria-label="Do. intro">
+    <div class="splash__fallback"><p class="brand brand--lg">Do<span class="brand__dot">.</span></p><p class="tagline">One production workspace.</p></div>
+    <video id="splash-video" class="splash__video" muted playsinline webkit-playsinline preload="auto" aria-hidden="true"></video>
+    <button class="splash__skip" type="button" data-go="welcome">Skip</button>
+  </section>
+
+  <!-- 2. Welcome -->
+  <section class="screen screen--welcome" id="welcome" aria-labelledby="welcome-title">
+    <div class="welcome__card">
+      <p class="brand brand--lg">Do<span class="brand__dot">.</span></p>
+      <p class="tagline">One production workspace<span class="brand__dot">.</span></p>
+
+      <h1 class="welcome__title" id="welcome-title">Make the production possible.</h1>
+      <p class="welcome__lede">Plan productions, coordinate partners and equipment, compare quotes, and keep the financial record clear.</p>
+
+      <div class="install-panel" id="install-panel">
+        <button class="pill" type="button" id="install-button">Install app</button>
+        <p id="install-help" role="status"></p>
+      </div>
+      <div class="choices">
+        <button class="choice choice--primary" type="button" data-go="roles">
+          <span class="choice__text">
+            <span class="choice__title">Choose a demo</span>
+            <span class="choice__sub">Look around a full workspace. No account needed.</span>
+          </span>
+          <span class="choice__arrow" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="choice" type="button" aria-disabled="true">
+          <span class="choice__text">
+            <span class="choice__title">Create an account</span>
+            <span class="choice__sub">Bring your next production into Do<span class="brand__dot">.</span></span>
+          </span>
+          <span class="choice__arrow" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="choice" type="button" aria-disabled="true">
+          <span class="choice__text">
+            <span class="choice__title">Log in</span>
+            <span class="choice__sub">Already working in Do<span class="brand__dot">.</span></span>
+          </span>
+          <span class="choice__arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Roles -->
+  <section class="screen screen--roles" id="roles" aria-labelledby="roles-title">
+    <header class="roles__header">
+      <div>
+        <p class="brand">Do<span class="brand__dot">.</span></p>
+        <p class="tagline tagline--sm">One production workspace<span class="brand__dot">.</span></p>
+        
+      </div>
+      <button class="pill" type="button" data-go="welcome">Log in</button>
+    </header>
+
+    <div class="roles__intro">
+      
+      <h1 class="roles__title" id="roles-title">How do you work in production?</h1>
+    </div>
+
+    <div class="roles__grid">
+      <article class="role role--light">
+        <p class="eyebrow">Production teams</p>
+        <h2 class="role__title">I organize productions</h2>
+        <svg class="role__art" viewBox="0 0 120 96" aria-hidden="true"><g fill="currentColor"><path d="M14 40h92v46a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z"/><path d="M12 22 96 8l5 24-84 14z"/></g><g fill="var(--art-bg)"><path d="M28 21l10-2 8 16-10 2zM52 17l10-2 8 16-10 2zM76 13l10-2 8 16-10 2z"/><rect x="26" y="56" width="52" height="5" rx="2.5"/><rect x="26" y="68" width="34" height="5" rx="2.5"/></g></svg>
+        <p class="role__desc">For producers, production companies, and the people who keep the whole project moving.</p>
+        <span class="role__arrow" aria-hidden="true">→</span>
+      </article>
+
+      <article class="role role--dark">
+        <p class="eyebrow">Crew &amp; services</p>
+        <h2 class="role__title">I provide skills or services</h2>
+        <svg class="role__art" viewBox="0 0 120 96" aria-hidden="true"><g fill="currentColor"><rect x="30" y="26" width="58" height="36" rx="6"/><circle cx="26" cy="20" r="11"/><circle cx="52" cy="20" r="11"/><path d="M88 36l22-10v36l-22-10z"/><path d="M56 62l-20 32h8l14-24 14 24h8L60 62z"/></g><g fill="var(--art-bg)"><circle cx="26" cy="20" r="4"/><circle cx="52" cy="20" r="4"/><rect x="38" y="36" width="22" height="16" rx="3"/></g></svg>
+        <p class="role__desc">For crew, hair and makeup, wardrobe, equipment suppliers, locations, and other production businesses.</p>
+        <span class="role__arrow" aria-hidden="true">→</span>
+      </article>
+
+      <article class="role role--gold">
+        <p class="eyebrow">Clients &amp; brands</p>
+        <h2 class="role__title">I’m commissioning a production</h2>
+        <svg class="role__art" viewBox="0 0 120 96" aria-hidden="true"><g fill="currentColor"><rect x="22" y="14" width="76" height="22" rx="5"/><rect x="18" y="52" width="84" height="12" rx="4"/><path d="M28 36l-10 58h8l9-58zM92 36l10 58h-8l-9-58z"/><path d="M50 64l-14 30h8l12-24 12 24h8L70 64z"/></g><g fill="var(--art-bg)"><rect x="34" y="22" width="52" height="6" rx="3"/></g></svg>
+        <p class="role__desc">For clients, brands, and agencies having a film, event, or other production made for them.</p>
+        <span class="role__arrow" aria-hidden="true">→</span>
+      </article>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
